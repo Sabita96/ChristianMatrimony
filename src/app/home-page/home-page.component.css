@@ -1,0 +1,187 @@
+.container{
+    /* margin-bottom: 7%; */
+}
+.mainDiv{
+    height: 567px;
+    width: 100%;
+    background-image: url(https://img2.shaadi.com/assests/2019/images/60-lakh-home-banner-v1.jpg);
+    background-position-x: center;
+    background-position-y: center;
+    background-repeat-x: no-repeat;
+    background-repeat-y: no-repeat;
+}
+.first{
+    padding: 28% 0% 0% 25%;
+    font-family: Raleway,sans-serif;
+    font-size: 2.5em;
+    font-weight: 500;
+    line-height: 50px;
+    color: white;
+    text-shadow: 1px 1px 1px #1f2a1f;
+}
+.form-wrapper {
+    width: 100%;
+    left: 0;
+    right: 0;
+    font-family: Roboto,sans-serif;
+    background: rgba(0,0,0,.3);
+    border-radius: 3px;
+    color: white;
+    margin-bottom: 7%;
+
+}
+.submit{
+
+}
+.second{
+    padding: 2% 2%;
+}
+
+.third{
+    padding:0% 29%;
+}
+
+h2{
+    color: #ff5a60;
+    font-size: 35px;
+    font-family: Raleway,sans-serif!important;
+    font-weight: 500;
+}
+.dropdwn{
+    padding: 2% 4%;
+}
+.signup{
+    background: url(https://img2.shaadi.com/assests/2016/images/home-icon-sprite.png) no-repeat left 1px;
+    margin: 0 auto;
+    display: block;
+    position: relative;
+    background-size: 100%;
+    height: 148px;
+    width: 133px;
+    transition: all .5s ease-in-out 0s;
+}
+.connect{
+    background: url(https://img2.shaadi.com/assests/2016/images/home-icon-sprite.png) no-repeat left -292px;
+    margin: 0 auto;
+    display: block;
+    position: relative;
+    background-size: 100%;
+    height: 148px;
+    width: 133px;
+    transition: all .5s ease-in-out 0s;
+}
+.interact{
+    background: url(https://img2.shaadi.com/assests/2016/images/home-icon-sprite.png) no-repeat left -591px;
+    margin: 0 auto;
+    display: block;
+    position: relative;
+    background-size: 100%;
+    height: 148px;
+    width: 133px;
+    transition: all .5s ease-in-out 0s;
+}
+.link{
+    font-size: 24px;
+    font-weight: 400;
+    text-decoration: underline;
+    color: #00bcd5!important
+}
+.img-box{
+    overflow: hidden;
+}
+li{
+    list-style: none;
+    margin:0;
+    padding:2%;
+
+}
+ul{
+    display: flex;
+}
+.no-decoration{
+
+text-decoration: none;
+}
+ li {
+    /* color: #666666;
+    font-size: 13px;
+    font-weight: 400;
+    margin-top: 14px; */
+    transition: all .5s ease-in-out 0s;
+}
+.fourth{
+    background-color:#eee;
+
+}
+.about{
+    width: 100%;
+    float: left;
+    padding: 52px 0 26px 0;
+    background: #33485a;
+}
+.topText{
+    margin-right: 2em;
+    text-decoration: none;
+    /* color: white; */
+}
+
+/* //popup */
+/* The Modal (background) */
+.modal {
+    display: none;/* Hidden by default*/
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width:29%; /* Could be more or less, depending on screen size */
+  }
+
+  /* The Close Button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+@media (max-width: 600px) {
+
+    .mainDiv{
+        height: 903px;
+    }
+}
+@media (max-width:600px){
+    .container{
+        margin-bottom: 7%;
+    }
+}
+@media (max-width:1024px) {
+    .container{
+        margin-bottom: 7%;
+    }
+}
+@media screen and(min-width:720px) and (max-width:770px){
+    .container{
+        margin-bottom: 7%;
+    }
+}
