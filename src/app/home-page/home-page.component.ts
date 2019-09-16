@@ -8,7 +8,7 @@ import { Component, OnInit, SimpleChanges  } from '@angular/core';
 export class HomePageComponent implements OnInit {
   modal: HTMLElement;
   btn: HTMLElement;
-  span: Element;
+  span: Element;        
   isPopup: boolean = false;
   constructor() {
       // Get the modal

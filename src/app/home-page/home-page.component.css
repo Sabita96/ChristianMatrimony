@@ -97,6 +97,7 @@ li{
 }
 ul{
     display: flex;
+    padding: 0% 10%;
 }
 .no-decoration{
 
@@ -118,13 +119,42 @@ text-decoration: none;
     float: left;
     padding: 52px 0 26px 0;
     background: #33485a;
+    position: absolute;
+    left: 0;
+    color: white !important;
+
 }
 .topText{
     margin-right: 2em;
     text-decoration: none;
     /* color: white; */
 }
-
+.footer{
+    color : white !important;
+}
+.footerText{
+    padding: 2% 8%;
+}
+.headerText{
+    color:white !important;
+}
+.modal-content-wrapper{
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    overflow-y: scroll;
+}
+.modal-form-wrapper{
+    background-color: #fff;
+    position: relative;
+    padding: 2em 1.3em .5em;
+    max-width: 300px;
+    margin: auto;
+    border-radius: 3px;
+}
 /* //popup */
 /* The Modal (background) */
 .modal {
