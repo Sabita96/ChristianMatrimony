@@ -193,9 +193,13 @@ text-decoration: none;
     text-decoration: none;
     cursor: pointer;
   }
-
+.popup-header{
+    font-size: 20px !important;
+    line-height: 24px !important;
+    font-family: "Roboto,sans-serif";
+    color:black!important;
+}
 @media (max-width: 600px) {
-
     .mainDiv{
         height: 903px;
     }

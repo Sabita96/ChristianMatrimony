@@ -1,7 +1,7 @@
 <div class="mainDiv">
     <div class="container-fluid">
         <!-- //popup -->
-            <div class="modal-content-wrapper">
+            <!-- <div class="modal-content-wrapper">
                     <form class="modal-form-wrapper">
                 ssssssssssssss
                 Let's set up your account, while
@@ -9,9 +9,35 @@
                 Enter your email id
                 <input type="text">
                 </form>
-                </div>
+                </div> -->
                 <!-- //end -->
         <div class="container">
+            <!-- Trigger/Open The Modal -->
+<button id="myBtn" (click)="openPopup()">Open Modal</button>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close text-right" (click)="close()">&times;</span>
+    <div class="mx-3">
+            <h2 class="popup-header">
+                    Let's set up your account, while
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;we find Matches for you!
+            </h2>
+            <form>
+                <div class="row">Enter your email id</div>
+                <div class="row">
+                    <input type="text">
+                </div>
+            </form>
+    </div>
+
+
+  </div>
+
+</div>
             <div class=" row float-right mt-4 headerText">
                 <span class="topText">Login</span>
                 <span>Help</span>
