@@ -1,4 +1,5 @@
 import { Component, OnInit, SimpleChanges  } from '@angular/core';
+import { FormGroup,FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-home-page',
@@ -10,14 +11,18 @@ export class HomePageComponent implements OnInit {
   btn: HTMLElement;
   span: Element;        
   isPopup: boolean = false;
-  constructor() {
+  loginForm: FormGroup;
+  constructor(private formBuilder: FormBuilder ) {
       // Get the modal
 
   }
-
+  get formControls() { return this.loginForm.controls; }
   ngOnInit() {
 
-
+    this.loginForm  =  this.formBuilder.group({
+      email: ['', Validators.required],
+      password: ['', Validators.required]
+  });
     // // Get the button that opens the modal
     //  this.btn = document.getElementById("myBtn");
 
