@@ -9,9 +9,11 @@ import { FormGroup,FormBuilder, Validators } from '@angular/forms';
 export class HomePageComponent implements OnInit {
   modal: HTMLElement;
   btn: HTMLElement;
-  span: Element;        
+  span: Element;
   isPopup: boolean = false;
   loginForm: FormGroup;
+  isLogin: boolean = false;
+  isSignup: boolean = true;
   constructor(private formBuilder: FormBuilder ) {
       // Get the modal
 
@@ -21,8 +23,10 @@ export class HomePageComponent implements OnInit {
 
     this.loginForm  =  this.formBuilder.group({
       email: ['', Validators.required],
-      password: ['', Validators.required]
-  });
+      password: ['', Validators.required],
+      confirmPassword: ['', Validators.required]
+
+    });
     // // Get the button that opens the modal
     //  this.btn = document.getElementById("myBtn");
 

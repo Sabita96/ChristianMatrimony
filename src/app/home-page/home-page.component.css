@@ -126,7 +126,7 @@ text-decoration: none;
 }
 .topText{
     margin-right: 2em;
-    text-decoration: none;
+    /* text-decoration: none; */
     /* color: white; */
 }
 .footer{
@@ -200,8 +200,23 @@ text-decoration: none;
     color:black!important;
 }
 input{
-    width: 92%;
+    width: 100%;
 }
+.login{
+    width: 100%;
+}
+a{
+    cursor: pointer;
+    color: #17a2b8;
+    text-decoration: underline !important;
+}
+a:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+/* .drpdwn{
+    width: 100%;
+} */
 @media (max-width: 600px) {
     .mainDiv{
         height: 903px;
