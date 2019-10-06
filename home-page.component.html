@@ -1,0 +1,340 @@
+<!-- <div class="">
+    <div class="container-fluid"> -->
+        <!-- //popup -->
+        <!-- <div class="modal-content-wrapper">
+                    <form class="modal-form-wrapper">
+                ssssssssssssss
+                Let's set up your account, while
+                <br>we find Matches for you!
+                Enter your email id
+                <input type="text">
+                </form>
+                </div> -->
+        <!-- //end -->
+        <div class="container-fluid mainDiv">
+            <!-- Trigger/Open The Modal -->
+            <!-- <button id="myBtn" (click)="openPopup()">Open Modal</button> -->
+
+            <!-- The Modal -->
+            <div id="myModal" class="modal">
+
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <span class="close text-right" (click)="close()">&times;</span>
+                    <div class="mx-3" *ngIf="isSignup">
+                        <h2 class="popup-header">
+                            Let's set up your account, while
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;we find Matches for you!
+                        </h2>
+                        <form>
+                            <!-- <label>Enter your email id</label>
+                    <input type="text"> -->
+                            <div class="login">
+                                <form [formGroup]="loginForm" class="login-container" (Submit)="login()">
+                                    Enter your email id
+                                    <p [ngClass]="{ 'has-error': isSubmitted && formControls.email.errors }">
+                                        <input type="email" placeholder="Email" formControlName="email">
+                                    </p>
+
+                                    <div *ngIf="isSubmitted && formControls.email.errors" class="help-block">
+                                        <div *ngIf="formControls.email.errors.required">Email is required</div>
+                                    </div>
+                                    Create a password
+                                    <p [ngClass]="{ 'has-error': isSubmitted && formControls.password.errors }">
+                                        <input type="password" placeholder="Password" formControlName="password">
+                                    </p>
+
+                                    <div *ngIf="isSubmitted && formControls.password.errors" class="help-block">
+                                        <div *ngIf="formControls.password.errors.required">Password is required</div>
+                                    </div>
+                                    Confirm password
+                                    <p [ngClass]="{ 'has-error': isSubmitted && formControls.confirmPassword.errors }">
+                                        <input type="password" placeholder="Password" formControlName="confirmPassword">
+                                    </p>
+
+                                    <div *ngIf="isSubmitted && formControls.confirmPassword.errors" class="help-block">
+                                        <div *ngIf="formControls.confirmPassword.errors.required">Password is required
+                                        </div>
+                                    </div>
+                                    <span class="mr-3">Create Profile for</span>
+                                    <!-- <br> -->
+                                    <div class="btn-group mb-3 drpdwn">
+                                        <button type="button" class="btn btn-info">Action</button>
+                                        <button type="button" class="btn btn-info dropdown-toggle dropdown-toggle-split"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <span class="sr-only">Toggle Dropdown</span>
+                                        </button>
+                                        <div class="dropdown-menu">
+                                            <a class="dropdown-item" href="#">Action</a>
+                                            <a class="dropdown-item" href="#">Another action</a>
+                                            <a class="dropdown-item" href="#">Something else here</a>
+                                            <div class="dropdown-divider"></div>
+                                            <a class="dropdown-item" href="#">Separated link</a>
+                                        </div>
+                                    </div>
+                                    <br/>
+                                        <button type="button" class="login btn btn-info" >Next</button>
+                                        <span class="ml-5">Already a Member? <a (click)="isSignup=false;isLogin=true;">Login</a></span>
+                                </form>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="mx-3" *ngIf="isLogin">
+                        <div class="text-center">
+                                <img src="https://img2.shaadi.com/assests/2016/images/home-page-layer-logo.png" alt="Login to shaadi.com" style="margin: 9px auto 30px; height: 87px; width: 87px;">
+                                <h2 class="popup-header">
+                                        Welcome Back
+                                        <br>Please Login
+                                    </h2>
+                        </div>
+                        <form>
+                            <div class="login">
+                                <form [formGroup]="loginForm" class="login-container" (Submit)="login()">
+                                    Mobile No. / Email ID
+                                    <p [ngClass]="{ 'has-error': isSubmitted && formControls.email.errors }">
+                                        <input type="email" placeholder="Email" formControlName="email">
+                                    </p>
+
+                                    <div *ngIf="isSubmitted && formControls.email.errors" class="help-block">
+                                        <div *ngIf="formControls.email.errors.required">Email is required</div>
+                                    </div>
+                                    Create a password
+                                    <p [ngClass]="{ 'has-error': isSubmitted && formControls.password.errors }">
+                                        <input type="password" placeholder="Password" formControlName="password">
+                                    </p>
+
+                                    <div *ngIf="isSubmitted && formControls.password.errors" class="help-block">
+                                        <div *ngIf="formControls.password.errors.required">Password is required</div>
+                                    </div>
+
+
+                                        <button type="button" class="login btn btn-info" >Sign In</button>
+                                       <p class="text-center">
+                                            <span>New to Shaadi.com?</span><br>
+                                            <a (click)="isSignup=true;isLogin=false;">Sign Up Free</a>
+                                       </p>
+
+                                </form>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class=" row float-right mt-4 headerText">
+                <a class="topText" (click)="openPopup()">Login</a>
+                <a>Help</a>
+
+            </div>
+            <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                Launch demo modal
+              </button> -->
+            <div class="first row">
+                <h1> We bring people together. <br>&nbsp;&nbsp;&nbsp;&nbsp; Love unites them....
+                </h1>
+            </div>
+            <div class="form-wrapper">
+                <div class="second row">
+                    <div class="col-md-2">I'm looking for a
+                        <div class="btn-group drpdwn">
+                            <button type="button" class="btn btn-info">Action</button>
+                            <button type="button" class="btn btn-info dropdown-toggle dropdown-toggle-split"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="sr-only">Toggle Dropdown</span>
+                            </button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Separated link</a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-1">aged
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-info">Action</button>
+                            <button type="button" class="btn btn-info dropdown-toggle dropdown-toggle-split"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="sr-only">Toggle Dropdown</span>
+                            </button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Separated link</a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-1 dropdwn">to</div>
+                    <div class="col-md-2 dropdwn">
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-info">Action</button>
+                            <button type="button" class="btn btn-info dropdown-toggle dropdown-toggle-split"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="sr-only">Toggle Dropdown</span>
+                            </button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Separated link</a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-2">of religion
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-info">Action</button>
+                            <button type="button" class="btn btn-info dropdown-toggle dropdown-toggle-split"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="sr-only">Toggle Dropdown</span>
+                            </button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Separated link</a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-2">and mother tongue
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-info">Action</button>
+                            <button type="button" class="btn btn-info dropdown-toggle dropdown-toggle-split"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="sr-only">Toggle Dropdown</span>
+                            </button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Separated link</a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-2 mt-4"> <button class="btn btn-info">Let's begin</button> </div>
+                </div>
+            </div>
+            <div class="row third">
+                <h2 class="text-center">Find Your Special Someone</h2>
+            </div>
+            <ul>
+                <li>
+                    <div class="signup"></div>
+                    <p class="link text-center mt-2">Sign Up</p>
+                    <div>Register for free & put up your profile</div>
+                </li>
+                <li>
+                    <div class="signup"></div>
+                    <p class="link text-center mt-2">Connect</p>
+                    <div>Select & Connect with Matches you like</div>
+                </li>
+                <li>
+                    <div class="signup"></div>
+                    <p class="link text-center mt-2">Interact</p>
+                    <div>Become a Premium Member & Start a Conversation</div>
+                </li>
+            </ul>
+
+        </div>
+        <!-- <div class="fourth container-fluid">
+            <div>
+                <h2 class="text-center">Over 60 Lakh Happy Stories</h2>
+            </div>
+            <ul>
+                <li>
+                    <div class="img-box"><a
+                            href="https://www.jeevansathi.com/successStory/completestory?sid=4262&amp;year=2015"
+                            target="_blank"><img
+                                src="https://www.ieplads.com/mailers/2016/jeevansathi/js-lp-21sept/images/js1.jpg"></a>
+                    </div>
+                    <p><a href="https://www.jeevansathi.com/successStory/completestory?sid=4262&amp;year=2015"
+                            target="_blank">Shipra weds Rajesh</a></p>
+                </li>
+                <li>
+                    <div class="img-box"><a
+                            href="https://www.jeevansathi.com/successStory/completestory?sid=4283&amp;year=2015"
+                            target="_blank"><img
+                                src="https://www.ieplads.com/mailers/2016/jeevansathi/js-lp-21sept/images/js2.jpg"></a>
+                    </div>
+                    <p><a href="https://www.jeevansathi.com/successStory/completestory?sid=4283&amp;year=2015"
+                            target="_blank">Aparna weds Biren</a></p>
+                </li>
+                <li>
+                    <div class="img-box"><a
+                            href="https://www.jeevansathi.com/successStory/completestory?sid=4305&amp;year=2015"
+                            target="_blank"><img
+                                src="https://www.ieplads.com/mailers/2016/jeevansathi/js-lp-21sept/images/js3.jpg"></a>
+                    </div>
+                    <p><a href="https://www.jeevansathi.com/successStory/completestory?sid=4305&amp;year=2015"
+                            target="_blank">Shivani weds Anand</a></p>
+                </li>
+                <li>
+                    <div class="img-box"><a
+                            href="https://www.jeevansathi.com/successStory/completestory?sid=4329&amp;year=2015"
+                            target="_blank"><img
+                                src="https://www.ieplads.com/mailers/2016/jeevansathi/js-lp-21sept/images/js4.jpg"></a>
+                    </div>
+                    <p><a href="https://www.jeevansathi.com/successStory/completestory?sid=4329&amp;year=2015"
+                            target="_blank">Sneha weds Diwakar</a></p>
+                </li>
+
+            </ul>
+            <div class="about px-4">
+                <h2 class="footer text-center">About Jeevansathi.com</h2>
+                <div class="footerText">
+                    <p>Jeevansathi.com is one of India’s leading matrimonial websites that has helped lakhs of members
+                        find their perfect life partner.</p>
+                    <p>We believe choosing a life partner is a big and important decision, and hence work towards giving
+                        a simple and secure matchmaking experience for you and your family. Each profile registered with
+                        us goes through a manual screening process before going live on site; we provide superior
+                        privacy controls for Free; and also verify contact information of members.</p>
+                    <p>You can register for Free and search according to your specific criteria on age, height,
+                        community, profession, income, location and much more- on your computer, tablet or mobile.
+                        Regular custom mails and notifications make the process easier and take you closer to your
+                        Jeevansathi!</p>
+                </div>
+            </div>
+        </div> -->
+        <!-- <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        ...
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+    <!-- </div> -->
+    <!-- </div>
+
+</div> -->
+<!-- <li>
+        <div class="card" style="width: 16rem;">
+                <img src="https://www.ieplads.com/mailers/2016/jeevansathi/js-lp-21sept/images/js1.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Aparna weds Ramesh</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a class="blink btn btn-primary">Know More ></a>
+                </div>
+              </div>
+</li> -->
