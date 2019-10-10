@@ -2,13 +2,15 @@
     /* margin-bottom: 7%; */
 }
 .mainDiv{
-    height: 567px;
-    width: 100%;
+    /* height: 567px;
+    width: 100%; */
     background-image: url(https://img2.shaadi.com/assests/2019/images/60-lakh-home-banner-v1.jpg);
-    background-position-x: center;
-    background-position-y: center;
-    background-repeat-x: no-repeat;
-    background-repeat-y: no-repeat;
+    /* background-position-x: center;
+    background-position-y: center; */
+    background-repeat: no-repeat;
+    /* background-repeat-x: no-repeat;
+    background-repeat-y: no-repeat; */
+    background-size: 100% 100%;
 }
 .first{
     padding: 28% 0% 0% 25%;
@@ -219,7 +221,7 @@ a:hover{
 } */
 @media (max-width: 600px) {
     .mainDiv{
-        height: 903px;
+        /* height: 903px; */
     }
 }
 @media (max-width:600px){
