@@ -1,10 +1,7 @@
-/* //sabita  */
-.no-padding {
-    padding-left: 0;
-    padding-right: 0;
-  }
 .first{
-    padding: 24% 29% 2%;
+    width: 100%;
+    text-align: center;
+    padding-top: 27%;
     font-family: Raleway,sans-serif;
     font-size: 2.5em;
     font-weight: 500;
@@ -12,21 +9,14 @@
     color: white;
     text-shadow: 1px 1px 1px #1f2a1f;
 }
-.mainDiv{
-    width: 100%;
-    height: 567px;
-    background-image: url(https://img2.shaadi.com/assests/2019/images/60-lakh-home-banner-v1.jpg);
-    background-position-x: center;
-    background-position-y: center;
-    background-repeat-x: no-repeat;
-    background-repeat-y: no-repeat;
-    background-attachment: initial;
-    background-origin: initial;
-    background-clip: initial;
-    background-color: initial;
-    background-size: cover !important;
-}
+    .container-fluid {
+        padding-right:0;
+        padding-left:0;
+        margin-right:auto;
+        margin-left:auto
+     }
 .form-wrapper {
+    padding: 3%;
     width: 100%;
     left: 0;
     right: 0;
@@ -37,6 +27,107 @@
     margin-bottom: 7%;
 
 }
-.second{
-    padding: 1% 2%;
+/* position: absolute;left: 0; */
+.mainDiv{
+    /* height: 100%;
+    width: 100%; */
+    background-image: url(https://img2.shaadi.com/assests/2019/images/60-lakh-home-banner-v1.jpg);
+    /* background-position-x: center;
+    background-position-y: center;
+    background-repeat-x: no-repeat;
+    background-repeat-y: no-repeat;
+    background-size: cover; */
+
 }
+.mainDiv1{
+    /* background-image: url(""); */
+
+}
+
+.Dropdown-control{
+    padding: 3% 5%;
+    cursor: pointer!important;
+    color: #72727d!important;
+    font-family: Roboto,sans-serif!important;
+    background-color: #fff;
+}
+.Dropdown-root {
+    position: relative;
+}
+.ageWrap{
+    display: flex;
+}
+.ageFrom, .ageUpto{
+    min-width: 30% ;
+    /* padding: 3% 5%; */
+}
+.ageTo{
+    width: 16%;
+    text-align: center;
+}
+/* * Style the links inside the sidenav */ *
+#mySidenav a {
+  position: fixed; /* Position them relative to the browser window */
+  left: -80px; /* Position them outside of the screen */
+  transition: 0.3s; /* Add transition on hover */
+  padding: 15px; /* 15px padding */
+  width: 100px; /* Set a specific width */
+  text-decoration: none; /* Remove underline */
+  font-size: 20px; /* Increase font size */
+  color: white; /* White text color */
+  border-radius: 0 5px 5px 0; /* Rounded corners on the top right and bottom right side */
+}
+
+#mySidenav a:hover {
+  left: 0; /* On mouse-over, make the elements appear as they should */
+}
+
+/* The about link: 20px from the top with a green background */
+#about {
+  top: 20px;
+  background-color: #4CAF50;
+}
+
+#blog {
+  top: 80px;
+  background-color: #2196F3; /* Blue */
+}
+
+#projects {
+  top: 140px;
+  background-color: #f44336; /* Red */
+}
+#login{
+    top: 200px;
+  background-color: #816967; /* Red */
+}
+#contact {
+  top: 260px;
+  background-color: #555 /* Light Black */
+}
+.bg-text {
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+    color: white;
+    font-weight: bold;
+    font-size: 80px;
+    border: 10px solid #f1f1f1;
+    position: fixed; /* Stay fixed */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+  }
+  .bg-image{
+    height: 100%;
+    width: 100%;
+    /* background-image: url(https://img2.shaadi.com/assests/2019/images/60-lakh-home-banner-v1.jpg); */
+    background-position-x: center;
+    background-position-y: center;
+    background-repeat-x: no-repeat;
+    background-repeat-y: no-repeat;
+    background-size: cover;
+  }

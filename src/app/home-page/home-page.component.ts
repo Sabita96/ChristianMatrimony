@@ -47,4 +47,7 @@ export class HomePageComponent implements OnInit {
     console.log('close!!!');
     document.getElementById("myModal").style.display = "none";
   }
+  getBannerImg(){
+    return "backgroun"
+  }
 }
