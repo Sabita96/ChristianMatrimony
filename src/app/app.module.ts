@@ -6,6 +6,8 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PopupComponent } from './popup/popup.component';
+import { SlideshowModule } from 'ng-simple-slideshow';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,7 +18,8 @@ import { PopupComponent } from './popup/popup.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    SlideshowModule
   ],
   providers: [],
   bootstrap: [AppComponent],

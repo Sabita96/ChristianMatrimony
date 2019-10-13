@@ -1,7 +1,9 @@
 .first{
+    position: absolute;
     width: 100%;
     text-align: center;
-    padding-top: 27%;
+    /* padding-top: 27%; */
+    top: 64%;
     font-family: Raleway,sans-serif;
     font-size: 2.5em;
     font-weight: 500;
@@ -29,14 +31,14 @@
 }
 /* position: absolute;left: 0; */
 .mainDiv{
-    /* height: 100%;
-    width: 100%; */
+    height: 100%;
+    width: 100%;
     background-image: url(https://img2.shaadi.com/assests/2019/images/60-lakh-home-banner-v1.jpg);
-    /* background-position-x: center;
+    background-position-x: center;
     background-position-y: center;
     background-repeat-x: no-repeat;
     background-repeat-y: no-repeat;
-    background-size: cover; */
+    background-size: cover;
 
 }
 .mainDiv1{
@@ -131,3 +133,50 @@
     background-repeat-y: no-repeat;
     background-size: cover;
   }
+  /* // */
+  #slideshow {
+    margin: 50px auto;
+    position: relative;
+    width: 240px;
+    height: 240px;
+    padding: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.4);
+}
+
+#slideshow > div {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+}
+@media (min-width:360px) and (max-width: 365px ){
+    .first{
+        top: 55% !important;
+    }
+}
+@media (min-width: 1024px) and (max-width: 1100px){
+    .first{
+        top: 27% !important;
+    }
+}
+@media (min-width: 768px) and (max-width: 770px){
+    .first{
+        top: 37% !important;
+    }
+}
+@media (min-width: 411px) and (max-width: 500px){
+    .first{
+        top: 39% !important;
+    }
+}
+@media (min-width: 320px) and (max-width: 370px){
+    .first{
+        top: 55% !important;
+    }
+}
+@media (min-width: 375px) and (max-width: 500px){
+    .first{
+        top: 43% !important;
+    }
+}

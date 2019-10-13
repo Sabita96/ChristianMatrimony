@@ -1,6 +1,6 @@
 import { Component, OnInit, SimpleChanges  } from '@angular/core';
 import { FormGroup,FormBuilder, Validators } from '@angular/forms';
-
+// import {assets } from
 @Component({
   selector: 'app-home-page',
   templateUrl: './home-page.component.html',
@@ -14,8 +14,12 @@ export class HomePageComponent implements OnInit {
   loginForm: FormGroup;
   isLogin: boolean = false;
   isSignup: boolean = true;
+  imageUrlArray: string[];
   constructor(private formBuilder: FormBuilder ) {
       // Get the modal
+      this.imageUrlArray=[
+     'https://img2.shaadi.com/assests/2019/images/60-lakh-home-banner-v3.jpg','../../assets/img/banner1.jpg']
+    //  'https://vakilsearch.com/advice/wp-content/uploads/2018/07/o-indian-wedding-gold-facebook.jpg'
 
   }
   get formControls() { return this.loginForm.controls; }
