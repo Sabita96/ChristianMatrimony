@@ -1,25 +1,130 @@
 <div class="container-fluid">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close text-right" (click)="close()">&times;</span>
+                <div class="mx-3" *ngIf="isSignup">
+                    <h2 class="popup-header">
+                        Let's set up your account, while
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;we find Matches for you!
+                    </h2>
+                    <form>
+                        <!-- <label>Enter your email id</label>
+                <input type="text"> -->
+                        <div class="login">
+                            <form [formGroup]="loginForm" class="login-container" (Submit)="login()">
+                                Enter your email id
+                                <p [ngClass]="{ 'has-error': isSubmitted && formControls.email.errors }">
+                                    <input type="email" placeholder="Email" formControlName="email">
+                                </p>
+
+                                <div *ngIf="isSubmitted && formControls.email.errors" class="help-block">
+                                    <div *ngIf="formControls.email.errors.required">Email is required</div>
+                                </div>
+                                Create a password
+                                <p [ngClass]="{ 'has-error': isSubmitted && formControls.password.errors }">
+                                    <input type="password" placeholder="Password" formControlName="password">
+                                </p>
+
+                                <div *ngIf="isSubmitted && formControls.password.errors" class="help-block">
+                                    <div *ngIf="formControls.password.errors.required">Password is required</div>
+                                </div>
+                                Confirm password
+                                <p [ngClass]="{ 'has-error': isSubmitted && formControls.confirmPassword.errors }">
+                                    <input type="password" placeholder="Password" formControlName="confirmPassword">
+                                </p>
+
+                                <div *ngIf="isSubmitted && formControls.confirmPassword.errors" class="help-block">
+                                    <div *ngIf="formControls.confirmPassword.errors.required">Password is required
+                                    </div>
+                                </div>
+                                <span class="mr-3">Create Profile for</span>
+                                <!-- <br> -->
+                                <div class="btn-group mb-3 drpdwn">
+                                    <button type="button" class="btn btn-info">Action</button>
+                                    <button type="button" class="btn btn-info dropdown-toggle dropdown-toggle-split"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <span class="sr-only">Toggle Dropdown</span>
+                                    </button>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="#">Action</a>
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                        <a class="dropdown-item" href="#">Something else here</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="#">Separated link</a>
+                                    </div>
+                                </div>
+                                <br/>
+                                    <button type="button" class="login btn btn-info" >Next</button>
+                                    <span class="ml-5">Already a Member? <a (click)="isSignup=false;isLogin=true;">Login</a></span>
+                            </form>
+                        </div>
+                    </form>
+                </div>
+                <div class="mx-3" *ngIf="isLogin">
+                    <div class="text-center">
+                            <img src="https://img2.shaadi.com/assests/2016/images/home-page-layer-logo.png" alt="Login to shaadi.com" style="margin: 9px auto 30px; height: 87px; width: 87px;">
+                            <h2 class="popup-header">
+                                    Welcome Back
+                                    <br>Please Login
+                                </h2>
+                    </div>
+                    <form>
+                        <div class="login">
+                            <form [formGroup]="loginForm" class="login-container" (Submit)="login()">
+                                Mobile No. / Email ID
+                                <p [ngClass]="{ 'has-error': isSubmitted && formControls.email.errors }">
+                                    <input type="email" placeholder="Email" formControlName="email">
+                                </p>
+
+                                <div *ngIf="isSubmitted && formControls.email.errors" class="help-block">
+                                    <div *ngIf="formControls.email.errors.required">Email is required</div>
+                                </div>
+                                Create a password
+                                <p [ngClass]="{ 'has-error': isSubmitted && formControls.password.errors }">
+                                    <input type="password" placeholder="Password" formControlName="password">
+                                </p>
+
+                                <div *ngIf="isSubmitted && formControls.password.errors" class="help-block">
+                                    <div *ngIf="formControls.password.errors.required">Password is required</div>
+                                </div>
+
+
+                                    <button type="button" class="login btn btn-info" >Sign In</button>
+                                   <p class="text-center">
+                                        <span>New to Shaadi.com?</span><br>
+                                        <a (click)="isSignup=true;isLogin=false;">Sign Up Free</a>
+                                   </p>
+
+                            </form>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: #e3f2fd;">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <a class="navbar-brand" href="#">Navbar</a>
-      
+
         <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
           <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
             <li class="nav-item active">
               <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
+              <a class="nav-link" href="#"  (click)="openPopup()">Login</a>
             </li>
             <li class="nav-item">
               <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
             </li>
           </ul>
           <form class="form-inline my-2 my-lg-0">
-            <!-- <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"> -->
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Login</button>
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
           </form>
         </div>
       </nav>
@@ -39,42 +144,78 @@
            [lazyLoad]="imageUrlArray?.length > 1"
            [autoPlayWaitForLazyLoad]="true">sssssssssssssssss</slideshow> -->
          <!-- // -->
-         <div style="height: 640px;">
-        <div >
+         <div style="height: 20vh;">
+
                 <slideshow [imageUrls]="imageUrlArray"
-                [height]="'525px'"
-                   [minHeight]="'525px'"
+                [height]="'550px'"
                    [autoPlay]="true"
                    [showArrows]="false"
                    [lazyLoad]="imageUrlArray?.length > 1"
                    [autoPlayWaitForLazyLoad]="true"></slideshow>
-                   <!-- <h2 class="first">We bring people together. <BR>Love unites them...</h2> -->
+                   <div class="first">
+                   <h2 class="first-header">We bring people together. <BR>Love unites them...</h2>
+                    <!-- <h3>Search as you want</h3> -->
+                    <div class="outer-wrapper">
+        <div class="form-wrapper">
+
+            <form>
+                <div class="form-row">
+                    <div class="form-group col-md-2 col-6"><label class="label" for="lookingFor">I'm looking for
+                            a</label>
+                        <div class="Dropdown-root">
+                            <div class="Dropdown-control" aria-haspopup="listbox">
+                                <div class="Dropdown-placeholder is-selected">Woman</div>
+                                <div class="Dropdown-arrow-wrapper"><span class="Dropdown-arrow"></span></div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group col-md-3 col-6"><label class="label">aged</label>
+                        <div class="ageWrap">
+                            <div class="ageFrom">
+                                <div class="Dropdown-root">
+                                    <div class="Dropdown-control" aria-haspopup="listbox">
+                                        <div class="Dropdown-placeholder is-selected">20</div>
+                                        <div class="Dropdown-arrow-wrapper"><span class="Dropdown-arrow"></span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ageTo">to</div>
+                            <div class="ageUpto">
+                                <div class="Dropdown-root">
+                                    <div class="Dropdown-control" aria-haspopup="listbox">
+                                        <div class="Dropdown-placeholder is-selected">25</div>
+                                        <div class="Dropdown-arrow-wrapper"><span class="Dropdown-arrow"></span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group col-md-2 col-6"><label class="label" for="inputPassword4">of religion</label>
+                        <div class="Dropdown-root">
+                            <div class="Dropdown-control" aria-haspopup="listbox">
+                                <div class="Dropdown-placeholder is-selected">Select</div>
+                                <div class="Dropdown-arrow-wrapper"><span class="Dropdown-arrow"></span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group col-md-3 col-6"><label class="label" for="inputPassword4">and mother
+                            tongue</label>
+                        <div class="Dropdown-root">
+                            <div class="Dropdown-control" aria-haspopup="listbox">
+                                <div class="Dropdown-placeholder is-selected">Select</div>
+                                <div class="Dropdown-arrow-wrapper"><span class="Dropdown-arrow"></span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group col-md-2 col-12 btnWrap"><label class="label btnLable"
+                            for="inputPassword4">&nbsp;</label><button data-testid="lets_begin" type="button"
+                            class="btn btn-primary form-control brand">Let's Begin</button></div>
+                </div>
+            </form>
+
         </div>
          </div>
-         <!-- <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active"> 
-                <img src="https://img2.shaadi.com/assests/2019/images/60-lakh-home-banner-v3.jpg" class="d-block w-100" height="600px" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                  <h2>We bring people together. <BR>Love unites them...</h2>
-                </div>
-              </div>
-            <div class="carousel-item">
-              <img src="../../assets/img/banner1.jpg" height="600px"  class="d-block w-100" alt="...">
-              <div class="carousel-caption d-none d-md-block">
-                <h2>We bring people together. <BR>Love unites them...</h2>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <img src="https://vakilsearch.com/advice/wp-content/uploads/2018/07/o-indian-wedding-gold-facebook.jpg" height="600px" class="d-block w-100" alt="...">
-              <div class="carousel-caption d-none d-md-block">
-                <h2>We bring people together. <BR>Love unites them...</h2>
-              </div>
-            </div>
-          </div>
-        </div> -->
-
-
-
-
+        </div>
+    </div>
     </div>
