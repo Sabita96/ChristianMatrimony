@@ -276,6 +276,35 @@ a:hover{
     /* width: 300px;
     height: 300px; */
   }
+  .rightCol{
+    padding: 2% 4%;
+    line-height: 2em;
+    background: white;
+  }
+  /* Blur-zoom Container */
+/* .img-hover-zoom--blur img {
+    transition: transform 1s, filter 2s ease-in-out;
+    filter: blur(2px);
+    transform: scale(1.2);
+  } */
+  
+  /* The Transformation */
+  /* .img-hover-zoom--blur:hover img {
+    filter: blur(0);
+    transform: scale(1);
+  } */
+  /* Brightness-zoom Container */
+.img-hover-zoom--brightness img {
+    transition: transform 2s, filter 1.5s ease;
+    transform-origin: center center;
+    filter: brightness(50%);
+  }
+  
+  /* The Transformation */
+  .img-hover-zoom--brightness:hover {
+    filter: brightness(100%);
+    transform: scale(1.3);
+  }
 @media (min-width:360px) and (max-width: 365px ){
     .first{
         top: 55% !important;
@@ -299,11 +328,11 @@ a:hover{
         padding: 1%;
     }
 }
-@media (min-width: 1030px){
+/* @media (min-width: 1030px){
     .first{
-        top: 49% !important;
+        top: 40% !important;
     }
-}
+} */
 @media (min-width: 768px) and (max-width: 1020px){
     .first{
         top: 34% !important;
