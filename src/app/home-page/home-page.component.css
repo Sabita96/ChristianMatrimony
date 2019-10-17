@@ -194,7 +194,7 @@
     margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
     border: 1px solid #888;
-    width:29%; /* Could be more or less, depending on screen size */
+    width:85%; /* Could be more or less, depending on screen size */
   }
 
   /* The Close Button */
@@ -283,12 +283,18 @@ a:hover{
     .details{
         margin-bottom: 0%;
       }
+      .modal-content {
+        width: 48%;
+    }
 }
-/* @media (min-width: 1030px){
+@media (min-width: 1030px){
     .first{
         top: 40% !important;
     }
-} */
+    .modal-content {
+        width: 34%;
+    }
+}
 @media (min-width: 768px) and (max-width: 1020px){
     .first{
         top: 34% !important;
@@ -305,6 +311,9 @@ a:hover{
     }
     .form-wrapper {
         padding: 1%;
+    }
+    .modal-content {
+        width:48%;
     }
 }
 @media (min-width: 411px) and (max-width: 500px){

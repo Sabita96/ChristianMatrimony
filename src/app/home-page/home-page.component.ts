@@ -14,7 +14,9 @@ export class HomePageComponent implements OnInit {
   loginForm: FormGroup;
   isLogin: boolean = false;
   isSignup: boolean = true;
+
   imageUrlArray: string[];
+  user: any = {};
   constructor(private formBuilder: FormBuilder ) {
       // Get the modal
       this.imageUrlArray=[
