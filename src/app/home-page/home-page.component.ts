@@ -4,7 +4,7 @@ import { FormGroup,FormBuilder, Validators } from '@angular/forms';
 @Component({
   selector: 'app-home-page',
   templateUrl: './home-page.component.html',
-  styleUrls: ['./home-page.component.css']
+  styleUrls: ['./home-page.component.scss']
 })
 export class HomePageComponent implements OnInit {
   modal: HTMLElement;
@@ -53,7 +53,14 @@ export class HomePageComponent implements OnInit {
     console.log('close!!!');
     document.getElementById("myModal").style.display = "none";
   }
-  getBannerImg(){
-    return "backgroun"
+  // getBannerImg(){
+  //   return "backgroun"
+  // }
+  openNav(){
+    console.log('sssssssssssssssssssssssssss')
+    document.getElementById("myNav").style.width = "100%";
+  }
+  closeNav(){
+    document.getElementById("myNav").style.width = "0%";
   }
 }
