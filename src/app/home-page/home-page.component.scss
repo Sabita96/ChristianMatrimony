@@ -255,7 +255,7 @@ a:hover{
     transition: transform .4s;
   }
   #img-container:hover #image {
-    transform: scale(1.3);
+    transform: scale(1.3) rotate(25deg);
     transform-origin: 50% 50%;
   }
 
