@@ -246,9 +246,11 @@ a:hover{
   }
   #img-container {
     display: inline-block;
-    margin: 20px;
     /* border: 1px solid black; */
     overflow: hidden;            /* clip the excess when child gets bigger than parent */
+  }
+  #img{
+    margin: 20px;
   }
   #img-container #image {
     display: block;
@@ -306,7 +308,10 @@ a:hover{
     right: 45px;
     font-size: 60px;
   }
-
+  .footer{
+    background: #5a5a5a;
+    color: #fff;
+  }
   /* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
   @media screen and (max-height: 450px) {
     .overlay a {font-size: 20px}

@@ -11,96 +11,96 @@
                     <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;we find Matches for you!
                 </h2>
                 <!-- <form> -->
-                    <!-- <label>Enter your email id</label>
+                <!-- <label>Enter your email id</label>
                 <input type="text"> -->
-                    <div class="login">
-                        <form [formGroup]="loginForm" class="login-container" (Submit)="login()">
-                            Enter your email id
-                            <p [ngClass]="{ 'has-error': isSubmitted && formControls.email.errors }">
-                                <input type="email" placeholder="Email" formControlName="email">
-                            </p>
+                <div class="login">
+                    <form [formGroup]="loginForm" class="login-container" (Submit)="login()">
+                        Enter your email id
+                        <p [ngClass]="{ 'has-error': isSubmitted && formControls.email.errors }">
+                            <input type="email" placeholder="Email" formControlName="email">
+                        </p>
 
-                            <div *ngIf="isSubmitted && formControls.email.errors" class="help-block">
-                                <div *ngIf="formControls.email.errors.required">Email is required</div>
-                            </div>
-                            Create a password
-                            <p [ngClass]="{ 'has-error': isSubmitted && formControls.password.errors }">
-                                <input type="password" placeholder="Password" formControlName="password">
-                            </p>
+                        <div *ngIf="isSubmitted && formControls.email.errors" class="help-block">
+                            <div *ngIf="formControls.email.errors.required">Email is required</div>
+                        </div>
+                        Create a password
+                        <p [ngClass]="{ 'has-error': isSubmitted && formControls.password.errors }">
+                            <input type="password" placeholder="Password" formControlName="password">
+                        </p>
 
-                            <div *ngIf="isSubmitted && formControls.password.errors" class="help-block">
-                                <div *ngIf="formControls.password.errors.required">Password is required</div>
-                            </div>
-                            Confirm password
-                            <p [ngClass]="{ 'has-error': isSubmitted && formControls.confirmPassword.errors }">
-                                <input type="password" placeholder="Password" formControlName="confirmPassword">
-                            </p>
+                        <div *ngIf="isSubmitted && formControls.password.errors" class="help-block">
+                            <div *ngIf="formControls.password.errors.required">Password is required</div>
+                        </div>
+                        Confirm password
+                        <p [ngClass]="{ 'has-error': isSubmitted && formControls.confirmPassword.errors }">
+                            <input type="password" placeholder="Password" formControlName="confirmPassword">
+                        </p>
 
-                            <div *ngIf="isSubmitted && formControls.confirmPassword.errors" class="help-block">
-                                <div *ngIf="formControls.confirmPassword.errors.required">Password is required
-                                </div>
+                        <div *ngIf="isSubmitted && formControls.confirmPassword.errors" class="help-block">
+                            <div *ngIf="formControls.confirmPassword.errors.required">Password is required
                             </div>
-                            <span class="mr-3">Create Profile for</span>
-                            <!-- <br> -->
-                            <div class="btn-group mb-3 drpdwn">
-                                <button type="button" class="btn btn-info">Action</button>
-                                <button type="button" class="btn btn-info dropdown-toggle dropdown-toggle-split"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <span class="sr-only">Toggle Dropdown</span>
-                                </button>
-                                <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="#">Action</a>
-                                    <a class="dropdown-item" href="#">Another action</a>
-                                    <a class="dropdown-item" href="#">Something else here</a>
-                                    <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="#">Separated link</a>
-                                </div>
+                        </div>
+                        <span class="mr-3">Create Profile for</span>
+                        <!-- <br> -->
+                        <div class="btn-group mb-3 drpdwn">
+                            <button type="button" class="btn btn-info">Action</button>
+                            <button type="button" class="btn btn-info dropdown-toggle dropdown-toggle-split"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="sr-only">Toggle Dropdown</span>
+                            </button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Separated link</a>
                             </div>
-                            <br />
-                            <button type="button" class="login btn btn-info">Next</button>
-                            <span class="ml-5">Already a Member? <a
-                                    (click)="isSignup=false;isLogin=true;">Login</a></span>
-                        </form>
-                        <form>
-                                <div class="form-group">
-                                  <label for="exampleInputEmail1">Email address</label>
-                                  <input type="email" name = "email" class="form-control" id="exampleInputEmail1" #email="ngModel" required aria-describedby="emailHelp" [(ngModel)]="user.email" placeholder="Enter email">
-                                  <div *ngIf="email.invalid && (email.dirty || email.touched)"
-                                  class="alert alert-danger">
+                        </div>
+                        <br />
+                        <button type="button" class="login btn btn-info">Next</button>
+                        <span class="ml-5">Already a Member? <a (click)="isSignup=false;isLogin=true;">Login</a></span>
+                    </form>
+                    <form>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Email address</label>
+                            <input type="email" name="email" class="form-control" id="exampleInputEmail1"
+                                #email="ngModel" required aria-describedby="emailHelp" [(ngModel)]="user.email"
+                                placeholder="Enter email">
+                            <div *ngIf="email.invalid && (email.dirty || email.touched)" class="alert alert-danger">
 
                                 <div *ngIf="email.errors.required">
-                                  Name is required.
+                                    Name is required.
                                 </div>
                                 <div *ngIf="email.errors.minlength">
-                                  Name must be at least 4 characters long.
+                                    Name must be at least 4 characters long.
                                 </div>
                                 <!-- <div *ngIf="email.errors.forbiddenName">
                                   Name cannot be Bob.
                                 </div> -->
 
-                              </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Password</label>
+                            <input type="password" name="password" class="form-control" [(ngModel)]="user.password"
+                                id="exampleInputPassword1" placeholder="Password" #password="ngModel" required>
+                            <div *ngIf="password.invalid && (password.dirty || password.touched)"
+                                class="alert alert-danger">
+                                <div *ngIf="password.errors.required">
+                                    Password is required.
                                 </div>
-                                <div class="form-group">
-                                  <label for="exampleInputPassword1">Password</label>
-                                  <input type="password"  name = "password" class="form-control" [(ngModel)]="user.password"
-                                  id="exampleInputPassword1" placeholder="Password" #password = "ngModel" required>
-                                  <div *ngIf="password.invalid && (password.dirty || password.touched)"
-                                  class="alert alert-danger">
-                                  <div *ngIf="password.errors.required">
-                                        Password is required.
-                                      </div>
-                                      <div *ngIf="password.errors.minlength">
-                                        Password must be at least 4 characters long.
-                                      </div>
+                                <div *ngIf="password.errors.minlength">
+                                    Password must be at least 4 characters long.
                                 </div>
                             </div>
-                                <div class="form-check">
-                                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                  <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                                </div>
-                                <button type="submit" class="btn btn-primary">Submit</button>
-                              </form>
-                    </div>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
                 <!-- </form> -->
             </div>
             <div class="mx-3" *ngIf="isLogin">
@@ -145,48 +145,48 @@
             </div>
         </div>
     </div>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: #e3f2fd;">
-        <!-- <button> -->
-            <span (click)="openNav()" class="toggle-bar ml-2" style="font-size: 33px;" ><i class="fa fa-bars" aria-hidden="true"></i></span>
-        <!-- </button> -->
-        <a class="navbar-brand" style="margin-left:36%; font-size:26px;">Christian Matrimony</a>
-
-        <!-- <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Christian Matrimony</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+            aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
                     <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#" (click)="openPopup()">Login</a>
+                    <a class="nav-link" href="#">Login/Signup</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                    <a class="nav-link" href="#">About</a>
                 </li>
             </ul>
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
-        </div> -->
+            <span class="navbar-text">
+                Search
+            </span>
+        </div>
     </nav>
-<!-- The overlay -->
-<div id="myNav" class="overlay">
 
-    <!-- Button to close the overlay navigation -->
-    <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
+    <!-- The overlay -->
+    <div id="myNav" class="overlay">
 
-    <!-- Overlay content -->
-    <div class="overlay-content">
-      <a href="#" >About</a>
-      <a (click)="openPopup();closeNav()">Login</a>
-      <a (click)="openPopup();closeNav()">Signup</a>
-      <a href="#">Contact</a>
+        <!-- Button to close the overlay navigation -->
+        <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
+
+        <!-- Overlay content -->
+        <div class="overlay-content">
+            <a href="#">About</a>
+            <a (click)="openPopup();closeNav()">Login</a>
+            <a (click)="openPopup();closeNav()">Signup</a>
+            <a href="#">Contact</a>
+        </div>
+
     </div>
 
-  </div>
-
-  <!-- Use any element to open/show the overlay navigation menu -->
-  <!-- <span (click)="openNav()" class="ml-2" style="font-size: 33px;"><i class="fa fa-bars" aria-hidden="true"></i>
+    <!-- Use any element to open/show the overlay navigation menu -->
+    <!-- <span (click)="openNav()" class="ml-2" style="font-size: 33px;"><i class="fa fa-bars" aria-hidden="true"></i>
     </span>
     <div></div> -->
     <!-- <div id="mySidenav" class="sidenav">
@@ -206,6 +206,7 @@
            [autoPlayWaitForLazyLoad]="true">sssssssssssssssss</slideshow> -->
     <!-- // -->
     <!-- <div > -->
+
 
     <slideshow [imageUrls]="imageUrlArray" [height]="'550px'" [autoPlay]="true" [showArrows]="false"
         [lazyLoad]="imageUrlArray?.length > 1" [autoPlayWaitForLazyLoad]="true"></slideshow>
@@ -280,62 +281,30 @@
     <div>
         <h2 class="text-center my-5" style="color: brown;">Christian Matrimonials Happy Stories</h2>
 
-        <!-- <div style="padding: 3% 7%;">
-        <div class="card" style="width: 24rem;">
-                <div class="zoomin frame">
-                    <img src="https://www.ieplads.com/mailers/2016/jeevansathi/js-lp-21sept/images/js1.jpg" class="card-img-top" alt="...">
-                </div>
 
-                <div class="card-body">
-                  <h5 class="card-title">Aparna weds Ramesh</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a class="blink btn btn-primary">Know More ></a>
-                </div>
-              </div>
-              <div class="card" style="width: 24rem;">
-                <div class="zoomin frame">
-                    <img src="https://www.ieplads.com/mailers/2016/jeevansathi/js-lp-21sept/images/js1.jpg" class="card-img-top" alt="...">
-                </div>
-
-                <div class="card-body">
-                  <h5 class="card-title">Aparna weds Ramesh</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a class="blink btn btn-primary">Know More ></a>
-                </div>
-              </div>
-              <div class="card" style="width: 24rem;">
-                <div class="zoomin frame">
-                    <img src="https://www.ieplads.com/mailers/2016/jeevansathi/js-lp-21sept/images/js1.jpg" class="card-img-top" alt="...">
-                </div>
-
-                <div class="card-body">
-                  <h5 class="card-title">Aparna weds Ramesh</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a class="blink btn btn-primary">Know More ></a>
-                </div>
-              </div>
-            </div> -->
         <div class="container">
-            <div style="padding: 3% 6%;background-color: aliceblue;" >
-                <div class="row" >
+            <div style="padding: 3% 6%;background-color: aliceblue;">
+                <div class="row">
 
-                    <div class="col-lg-6 col-md-6 col-sm-6 "  >
-                            <div id="img-container">
-                                    <img id="image" src="../../assets/img/1.png" width="100%" height="100%">
-                                </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 ">
+                        <div id="img-container" style="margin: 20px;">
+                            <img id="image" src="../../assets/img/1.png" width="100%" height="100%">
                         </div>
+                    </div>
                     <div class="details col-lg-6 col-md-6 col-sm-6 ">
                         <div>
-                        <h2>Found My Love</h2>
-                        <span>24th Feb, 2018</span>
-                        <p>Really a great thanks to this Angel Matrimonial which is the site where I found my perfect
-                            life
-                            partner. We didn't expect that we will become life partners but it was the belief in both of
-                            us
-                            which made it happen and once again thanks to this Christian matrimonials for making us
-                            together.</p>
-                        <button class="btn btn-primary" onclick="">read more</button>
-                    </div>
+                            <h2>Found My Love</h2>
+                            <span>24th Feb, 2018</span>
+                            <p>Really a great thanks to this Angel Matrimonial which is the site where I found my
+                                perfect
+                                life
+                                partner. We didn't expect that we will become life partners but it was the belief in
+                                both of
+                                us
+                                which made it happen and once again thanks to this Christian matrimonials for making us
+                                together.</p>
+                            <button class="btn btn-primary" onclick="">read more</button>
+                        </div>
                     </div>
                 </div>
                 <div class="row" style="background-color: aliceblue;">
@@ -350,13 +319,213 @@
                             together.</p>
                         <button class="btn btn-primary" onclick="">read more</button>
                     </div>
-                    <div class="col-lg-6 col-md-6 col-sm-6 "  >
-                            <!-- style="border: 1px solid #00000014" -->
-                            <div id="img-container">
-                                    <img id="image" src="../../assets/img/1.png" width="100%" height="100%">
-                                </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 ">
+                        <!-- style="border: 1px solid #00000014" -->
+                        <div id="img-container" style="margin: 20px;">
+                            <img id="image" src="../../assets/img/1.png" width="100%" height="100%">
                         </div>
+                    </div>
                 </div>
             </div>
         </div>
+
+        <div class="container">
+            <!-- <div data-slick='{"slidesToShow": 4, "slidesToScroll": 4}'>
+                        <div><h3>1</h3></div>
+                        <div><h3>2</h3></div>
+                        <div><h3>3</h3></div>
+                        <div><h3>4</h3></div>
+                        <div><h3>5</h3></div>
+                        <div><h3>6</h3></div>
+                      </div> -->
+            <h2 class="text-center my-5" style="color: brown;">Our PortFolio</h2>
+            <div class="container">
+                <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="card" style="width: 22rem;">
+                                        <div id="img-container">
+                                            <img id="image"
+                                                src="https://www.ieplads.com/mailers/2016/jeevansathi/js-lp-21sept/images/js1.jpg"
+                                                width="100%" height="100%">
+                                        </div>
+                                        <div class="card-body">
+                                            <h5 class="card-title">Aparna weds Ramesh</h5>
+                                            <p class="card-text">Some quick example text to build on the card title and
+                                                make up the bulk
+                                                of the card's content.</p>
+                                            <a class="blink btn btn-primary" style="color: white;">Know More ></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card" style="width: 22rem;">
+                                        <div id="img-container">
+                                            <img id="image"
+                                                src="https://www.ieplads.com/mailers/2016/jeevansathi/js-lp-21sept/images/js1.jpg"
+                                                width="100%" height="100%">
+                                        </div>
+
+                                        <div class="card-body">
+                                            <h5 class="card-title">Aparna weds Ramesh</h5>
+                                            <p class="card-text">Some quick example text to build on the card title and
+                                                make up the bulk
+                                                of the card's content.</p>
+                                            <a class="blink btn btn-primary" style="color: white;">Know More ></a>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-md-4">
+                                    <div class="card" style="width: 22rem;">
+                                        <div id="img-container">
+                                            <img id="image"
+                                                src="https://www.ieplads.com/mailers/2016/jeevansathi/js-lp-21sept/images/js1.jpg"
+                                                width="100%" height="100%">
+                                        </div>
+
+                                        <div class="card-body">
+                                            <h5 class="card-title">Aparna weds Ramesh</h5>
+                                            <p class="card-text">Some quick example text to build on the card title and
+                                                make up the bulk
+                                                of the card's content.</p>
+                                            <a class="blink btn btn-primary" style="color: white;">Know More ></a>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="card" style="width: 22rem;">
+                                    <div id="img-container">
+                                        <img id="image"
+                                            src="https://www.ieplads.com/mailers/2016/jeevansathi/js-lp-21sept/images/js1.jpg"
+                                            width="100%" height="100%">
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="card-title">Richard Loves</h5>
+                                        <p class="card-text">Some quick example text to build on the card title and
+                                            make up the bulk
+                                            of the card's content.</p>
+                                        <a class="blink btn btn-primary" style="color: white;">Know More ></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card" style="width: 22rem;">
+                                    <div id="img-container">
+                                        <img id="image"
+                                            src="https://www.ieplads.com/mailers/2016/jeevansathi/js-lp-21sept/images/js1.jpg"
+                                            width="100%" height="100%">
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="card-title">Richard Loves</h5>
+                                        <p class="card-text">Some quick example text to build on the card title and
+                                            make up the bulk
+                                            of the card's content.</p>
+                                        <a class="blink btn btn-primary" style="color: white;">Know More ></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card" style="width: 22rem;">
+                                    <div id="img-container">
+                                        <img id="image"
+                                            src="https://www.ieplads.com/mailers/2016/jeevansathi/js-lp-21sept/images/js1.jpg"
+                                            width="100%" height="100%">
+                                    </div>
+
+                                    <div class="card-body">
+                                        <h5 class="card-title">Aparna weds Ramesh</h5>
+                                        <p class="card-text">Some quick example text to build on the card title and
+                                            make up the bulk
+                                            of the card's content.</p>
+                                        <a class="blink btn btn-primary" style="color: white;">Know More ></a>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="card" style="width: 22rem;">
+                                    <div id="img-container">
+                                        <img id="image"
+                                            src="https://www.ieplads.com/mailers/2016/jeevansathi/js-lp-21sept/images/js1.jpg"
+                                            width="100%" height="100%">
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="card-title">Richard Loves</h5>
+                                        <p class="card-text">Some quick example text to build on the card title and
+                                            make up the bulk
+                                            of the card's content.</p>
+                                        <a class="blink btn btn-primary" style="color: white;">Know More ></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card" style="width: 22rem;">
+                                    <div id="img-container">
+                                        <img id="image"
+                                            src="https://www.ieplads.com/mailers/2016/jeevansathi/js-lp-21sept/images/js1.jpg"
+                                            width="100%" height="100%">
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="card-title">salsaksjais</h5>
+                                        <p class="card-text">Some quick example text to build on the card title and
+                                            make up the bulk
+                                            of the card's content.</p>
+                                        <a class="blink btn btn-primary" style="color: white;">Know More ></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card" style="width: 22rem;">
+                                    <div id="img-container">
+                                        <img id="image"
+                                            src="https://www.ieplads.com/mailers/2016/jeevansathi/js-lp-21sept/images/js1.jpg"
+                                            width="100%" height="100%">
+                                    </div>
+
+                                    <div class="card-body">
+                                        <h5 class="card-title">Aparna weds Ramesh</h5>
+                                        <p class="card-text">Some quick example text to build on the card title and
+                                            make up the bulk
+                                            of the card's content.</p>
+                                        <a class="blink btn btn-primary" style="color: white;">Know More ></a>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
     </div>
+    <div class ="footer ">
+            <ul>
+                <li style="padding: 1%;">Slaojaksdjasjdada</li>
+                <li style="padding: 1%;">Slaojaksdjasjdada</li>
+                <li style="padding: 1%;">Slaojaksdjasjdada</li>
+                <li style="padding: 1%;">Slaojaksdjasjdada</li>
+
+            </ul>
+
+        </div>
+</div>
